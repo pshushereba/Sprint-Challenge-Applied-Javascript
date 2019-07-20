@@ -11,7 +11,7 @@
 axios.get("https://lambda-times-backend.herokuapp.com/topics")
     .then((axiosData) => {
         // console.log("data", axiosData);
-        tabsContainer.appendChild(tabCreator(axiosData));
+        tabCreator(axiosData);
     })
     .catch((err) => {
         console.log("There was an error", err);
@@ -29,4 +29,3 @@ function tabCreator(tabInfo) {
 }
 
 const topicsContainer = document.querySelector(".topics");
-const tabsContainer = document.querySelector(".tabs");
